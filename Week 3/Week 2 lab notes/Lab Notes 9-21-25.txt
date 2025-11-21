@@ -1,0 +1,220 @@
+Creating EC2 Instance 
+
+
+Click on Security groups on the left side 
+
+
+Click on create security group 
+
+
+Basic details 
+
+Security group name- put a name
+
+
+Description- put a name
+
+
+VPC use default option 
+
+
+Inbound rules
+
+Click Add rule 
+
+HTTP Source (anywhere IPv4)
+
+SSH  Source (anywhere IPv4) to securely communicate with the server 
+
+
+Outbound rules leave it as it is
+
+
+Tags are optional 
+
+
+Check your Inbound rules and Outbound rules
+
+
+Click on create security group 
+
+
+On the left side click on instances
+
+
+Click on launch Instances either button works 
+
+
+Launch an instance 
+
+
+Name and tags-put a name 
+
+
+Skip application and os images 
+
+
+Instance type-t3.micro
+
+
+Create key pair (use defaults)
+
+Click on create key pair-name your key pair 
+
+Key pair type-RSA
+
+Private key file format-pem 
+
+Create key pair 
+
+
+Network settings-don't edit
+
+
+Select existing security group
+
+
+Common security groups choose one from the drop down menu
+
+
+Advanced details 
+
+
+User data 
+
+
+Put script in the all the way at bottom of the screen into the user data box
+
+Click launch Instance
+
+
+Instance summary 
+
+
+Copy Public DNS and open a different tab 
+
+use http://paste in the public dns link and hit enter
+
+
+You will now see your EC2 Instance 
+
+
+Check Instance box and click connect 
+
+Check everything under the EC2 INSTANCE CONNECT then click connect for the black screen 
+
+
+You use ping 8.8.8.8 control z to stop
+
+
+
+Create a template
+
+
+A template is used to automate the creation of new instances.
+
+
+Left side go to Instances 
+
+Go to actions, image and templates, create template from Instance
+
+Create lauch template 
+
+Lauch template name and description 
+
+Name the template 
+
+Template version description 
+
+You can skip to Resource tags and add tags
+
+Advanced details should have your script 
+
+Click on create launch template 
+
+Launch Instance from template
+
+Click on view launch templates 
+
+
+Launch Instance
+
+CREATE A TEMPLATE FROM INSTANCE 
+
+Create a template 
+
+Left side go to Instances 
+
+Go to actions, image and templates, create template from Instance
+
+(We use the template to launch new
+automate the creation of new instances.)
+
+Create lauch template 
+
+Lauch template name and description 
+
+Name the template - put a name
+
+Template version description - put a name
+
+Resource tags are optional 
+
+Advanced details 
+
+User data- your script should be already in the box below 
+
+Click on create launch template 
+
+Click on view launch templates 
+
+Launch Instance from template during this process the screen will be automatically filling itself out. There will be nothing to edit.
+
+EC2 
+
+Instances- copy Public DNS. Paste http://public DNS link in a new tab to create your instance 
+
+Modify Template
+
+Choose a template
+
+Action
+
+Modify template (create new version)
+
+Lauch template name and description 
+
+Name the template - put a name
+
+Template version description - put a name
+
+Resource tags are optional 
+
+Advanced details 
+
+User data- Your script should be already in the box below. Since you are modifying the template. Modifying the script will be a part of the process.
+
+Create template version
+
+Choosing the correct template 
+
+Actions
+
+Launch instance from template
+
+Choose a launch template
+
+Source template-Choose the correct template  
+
+Launch instance
+
+EC2 
+
+Instances- copy Public DNS. Paste http://public DNS link in a new tab to create your instance 
+
+This shows a way to have different versions from the original version under the one template.
+
+
+
+
+

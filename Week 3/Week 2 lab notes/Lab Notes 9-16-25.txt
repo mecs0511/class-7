@@ -1,0 +1,227 @@
+Creating a cost budget 
+
+Go to the search bar and type in budgets. Budgets are there to alert you in case you have some crazy costs. If you do the cost budget, then you get $20 extra in your AWS account.
+
+Click on create budget.
+(Budget setup) Use a template 
+Templates- Monthly cost budget 
+Budget name- 
+Enter your budgeted amount 
+If you go above your cost amount for the month, it's going to send you an alert. 
+
+Email recipients- for your alerts
+At the bottom right hand corner click on create budget.
+
+Regions And Availability Zones 
+
+A region is an area where multiple data
+centers for a compute service are located. All cloud all public clouds have this system.
+
+You can tell or can basically
+figure out how an area is doing. Like how their infrastructure is by their if they have an availability zone or not. It's kind of a big thing. 
+
+You can choose which region you want to use. For the most part, it's the same price or the price is negligible. If you wish to add a region you can you can just request that it is added. For example Asia Pacific Thailand. So you can click on that. We got to get this right and click on enable to enable the region.
+
+At work they might be doing work in
+certain countries. If that's true, then they want to have a region which is closer to their customers and you might have to enable that region. You have to think where are your customers and can you put your server or your services as close to your customers as possible. Then there are some services which are only in certain regions. in particular for AWS, it is um here it is. North Virginia has everything. Sometimes you'll have a service which isn't in a certain region. You need to be aware of that.
+
+Set Up An EC2 
+
+Type EC2 inside the search bar 
+Click on to EC2
+Go to network security 
+Then security groups 
+Click on create security group 
+Security group name 
+Description 
+Inbound rules  
+Type http
+Source
+Type anywhere IPv4
+Add rule 
+Type SSH
+Source 
+Type anywhere IPv4
+Don't touch outbound rules 
+Tags are optional 
+Click on create security group
+On the next screen under Inbound rules
+Http SSH IPv4 80 20 security group id 
+Is what you should see 
+On the left side of the screen 
+Click on instances 
+Click on launch Instances 1
+
+Launch An Instance 
+
+Name and tags- put a name
+
+Application OS images and instance type use the default 
+
+Key pair 
+Click on create new key pair
+Key pair name- put a name 
+Key pair type- use the default (RSA)
+Private key file format-use the default (pem)
+Click on create key pair 
+
+Network settings
+
+You need to select existing security group. 
+Click on select existing security group 
+Select the security group that you created 
+
+User data- optional 
+
+Go to the box under user data 
+
+Copy and the file from Theo's script 
+
+Click on launch Instance 
+
+In the next screen 
+
+You will see (success successfully initiated launch of instances-instance id)
+
+This will be in green at top part of the screen 
+
+If you don't see this go back and check your security group and EC2 settings 
+
+Click on the Instance id 
+
+Copy Public DNS (click on the two squares under Public DNS to copy)
+
+Open a new tab
+
+Type http://paste the Public DNS link and hit enter 
+
+This create a homepage with AWS Instance Details
+
+Create Lauch Template 
+
+Go to the left side of the screen and click on instances 
+
+Make sure the instance is box is checked that's under instances 
+
+Click on the Actions pull down menu 
+
+Go to image and templates 
+
+Create template from Instance 
+
+Lauch template name and description- put a name 
+
+Template version description - put a name
+
+Scroll down and check to see that all of the information is filled in like it's supposed to be
+
+Then click on Create launch template 
+
+Click on your instance 
+
+Go to connect 
+
+Connect 
+
+EC2 Instance Connect 
+
+Connection type- connect using a public IP 
+
+Click on connect and now be connected with the instance 
+
+Use 8.8.8.8 enter (this is Google DNS)
+
+If you can ping 8.8.8.8 without a doubt you have internet 
+
+Press control Z to stop pinging 
+
+If you want to ping again just press the up arrow 
+
+Terminate Your instance 
+
+Check your instance 
+
+Instance state- Terminate (delete) instance 
+
+Launch Instance drop down menu 
+
+Click on launch Instance from template 
+
+Choose a launch template- make a selection 
+
+Key pair and security group should not have to be touched 
+
+Advanced details 
+User data the script is already there 
+
+You can go to the summary and launch more than one instance 
+
+Click on launch Instance 
+
+Go to EC2 and you'll see 2 instances running 
+
+Launch templates 
+
+Launch template ID 
+
+Actions pull down menu to modify template
+
+Modify Template (create new version)
+
+Template version description- put a name 
+
+Scroll down to Advanced details. The user name
+should have the script already in the box.
+
+You can modify the pubic URL and put a different one.
+
+Click on Create template version 
+
+In the Launch template details. 
+
+Under Launch template version details.
+
+Under version drop down menu. You a default version and other one. The original one and the new one.
+
+On the same page go to actions drop down menu.
+
+Launch Instance from template 
+
+Choose a launch template- choose one of the two from the previous page 
+
+Scroll down the page. Everything should be the same.
+
+Summary (Number of instances) 1
+
+Launch Instance 
+
+Proceed without key pair 
+
+Click on Launch Instance 
+
+Instance summary
+
+Go to Instances 
+
+Copy Public DNS. Open a different tab.
+Paste the link into the address bar 
+
+You should see your AWS Instance Details 
+
+You can make changes to your code in your template and then launch it from there. So you don't have to copy it every time. You can just modify your script or code every time.  
+
+Just do a small incremental change. This is part of app development.
+
+Teardown 
+
+Go to Instances 
+
+Check or choose all Instances listed and check other regions that you might Instances running in.
+
+Go to Instances state drop down menu 
+
+Terminate (delete) instance 
+
+Terminate (delete)
+
+Your launch templates are saved per region 

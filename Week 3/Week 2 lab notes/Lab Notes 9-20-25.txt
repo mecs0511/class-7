@@ -1,0 +1,169 @@
+Console Home
+
+Search bar type budgets
+
+Services 
+Billing and Cost Management 
+
+Create a budget 
+
+Choose budget type
+
+Budget setup- Use a template 
+
+Template- new
+Monthly cost budget 
+
+Budget name- put a name 
+
+Enter your budget amount- Choose your amount 
+
+Email recipients- an email address for important information you will get about budget 
+
+Click on Create budget 
+
+Creating EC2 Instance 
+
+Search bar type in EC2 
+
+Click on Security groups on the left side
+
+Click on create security group 
+
+Basic details 
+
+Security group name- put a name
+
+Description- put a name
+
+VPC use default option 
+
+Inbound rules (are for people that are outside of the VPC and they're trying to connect to something inside the VPC. Traffic coming into the VPC)
+
+Click Add rule 
+
+HTTP Source (anywhere IPv4)
+
+SSH Source (anywhere IPv4)- it's a secure way to remotely connect to our EC2 Instance 
+
+Outbound rules leave it as it is. (Thiis for traffic leaving the VPC 
+
+Tags are optional 
+
+Click on Create security group 
+
+Check your Inbound rules 
+
+You should see two Inbound rules 
+
+Outbound rules 
+
+You should see one outbound rules 
+
+On the left side click on instances 
+
+Click on launch Instances either button works 
+
+Name and tags
+
+Name- put a name
+
+Skip application and os images 
+
+Instance type 
+
+t3.micro
+
+Key pair (login)
+
+When an EC2 Instance connect which through AWS. You don't actually need a key pair although it does use SSH.
+
+You can also use a key pair to download a private key which is like a password that you can use and you can run SSH through your own command line on your computer.
+
+Click on create key pair 
+
+Key pair name
+
+Key pair type-RSA 
+
+Private key file format-pem
+
+Create key pair 
+
+Network settings- don't click on edit 
+
+Network-Automatic default in the VPC don't have to do anything 
+
+Subnet- No preference (Default subnet in any availability zone)
+
+Auto-assign public IP-Enable 
+
+Select existing security group
+
+Common security groups choose one from the drop down menu 
+
+Configure storage- don't touch 
+
+Advanced details 
+
+User data 
+
+Put script in the box all the way at bottom of the screen 
+
+Go through your Summary and check the list of information 
+
+Click launch Instance
+
+Click on instance ID 
+
+When you have 3 status checks for your instance. Open a different tab to load the web page http://copy and paste your public DNS after the 2 slashes 
+
+Go to connect 
+
+EC2 Instance Connect 
+
+Connect using public IP 
+
+Click on the orange connect button 
+
+You should see your page (black screen connected)
+
+If you want to send a command to your EC2 Instance. Ping 8.8.8.8 is a good IP address. That's Google's DNS IP. You use control c to stop pinging.
+
+Instance connect could be troubleshooting, issuing commands, deploy software, changing software and patching the operating system.
+
+CREATE A TEMPLATE FROM INSTANCE 
+
+Create a template 
+
+Left side go to Instances 
+
+Go to actions, image and templates, create template from Instance
+
+Create lauch template 
+
+Lauch template name and description 
+
+Name the template - put a name
+
+Template version description - put a name
+
+Resource tags are optional 
+
+Advanced details 
+
+User data- your script should be already in the box below 
+
+Click on create launch template 
+
+Click on view launch templates 
+
+Launch Instance from template during this process the screen will be automatically filling itself out. There will be nothing to edit.
+
+EC2 
+
+Instances- copy Public DNS. Paste http://public DNS link in a new tab to create your instance 
+
+
+ 
+
