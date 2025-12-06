@@ -1,0 +1,53 @@
+Computer & Git Bash
+
+Go to your computer and open Git Bash.
+Go to your terminal AWS configure.
+It should have your keys, default region and output.
+You need to have a key for authentication.
+Make sure terraform is installed. Go to Git Bash and type in Terraform --version.
+It will work even if your version isn't up to date.
+Make a directory and cd into it and verify you're in the correct directory.
+Go to documents and make a folder.
+You can call it terraform or use the terraform folder that's already there. Whatever you name it. Don't you capital letters and it should be one name without any spaces.
+Create a subfolder and give it a name.
+When you're in the subfolder right click and go to show more options and then click on Open GitBash here.
+In GitBash make a authentication file.
+Type touch 0-off.tf
+You'll see the same file appear in your subfolder.
+This creates a terraform file.
+You won't be able to do anything unless you authentication.
+The first goal is to authenticate to AWS.
+Nunber the files. The 0 file is the first file.
+In GitBash type code . this will open Visual Studio Code.
+
+Visual Studio Code 
+
+When you open Visual Studio Code. You'll see the 0 file with nothing in it.
+Fork Theo's repo with yours.
+Go to Theo's repo click on 0-auth.tf and copy it.
+Paste it inside your Visual Studio Code under the 0-auth.tf file that you need to open.
+Save
+If you want to copy all the file in Theo's repo.
+Inside of the repo go go code and under HTTPS copy the url.
+
+GitBash
+
+Go to GitBash type git clone (url) and paste the url and hit enter.
+There will be a new folder created in Visual Studio Code with all of the copied files.
+Save 
+In GitBash type in cat 0-auth.tf and enter to make sure that you have saved it.
+Its mandatory that you save your terraform file before deploying.
+
+Visual Studio Code 
+
+Inside of Visual Studio Code at top of the page and click on view. 
+Go to Terminal and it will go directly to the current folder that you're working in.
+You type in ls to see that you have 2 things. Your terraform file and class folder.
+To start terraform, type terraform --version 
+This wiil show you have terraform installed.
+To start terraform type terraform init
+This wiil initialize terraform.
+You'll notice another folder has been added.
+Don't touch or do anything with these files.
+Don't use PowerShell use GitBash 
+Don't touch the .gitinore, .terraform. .terraform. lock.hcl files.
